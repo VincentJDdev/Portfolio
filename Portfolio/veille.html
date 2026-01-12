@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Portfolio - Veille</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <header>
+    <h1>Portfolio Jeudy Vincent</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="Stage1.html">Stages BTS SIO</a></li>
+        <li><a href="projet1.html">Projets BTS SIO</a></li>
+        <li><a href="projetperso.html">Projet Personnel</a></li>
+        <li><a href="veille.html">Veille Informatique</a></li>
+		    <li><a href="annexe.html">Annexes</a></li>	
+    </nav>
+  </header>
+  <main>
+    <h2>📘 Veille Informatique – DevSecOps : intégrer la sécurité dès le développement</h2>
+
+
+    
+    <br><br><br><br><br><br>
+    <h1>1️⃣ Introduction — Qu’est‑ce que le DevSecOps et pourquoi c’est devenu indispensable ?</h1>
+   <br><br>
+    <p> Le DevSecOps (Development + Security + Operations) est une méthodologie qui intègre la sécurité dans chaque étape du cycle de vie du développement logiciel, plutôt que de l’ajouter à la fin du processus. Il s’agit d’une extension du modèle DevOps, avec un objectif clair : faire de la sécurité une responsabilité partagée entre les développeurs, les opérations et les équipes de sécurité, dès la phase de conception. (Snyk)
+Ce modèle est devenu essentiel à cause de plusieurs évolutions du monde numérique : <br>
+   <br> • Accélération des cycles de développement : les logiciels sont livrés plus rapidement que jamais, notamment via des processus automatisés (CI/CD) ;
+   <p><br> • Menaces de cybersécurité croissantes, rendant les applications vulnérables si la sécurité n’est pas intégrée tôt. (Snyk)</p>
+   <p> <br> • Complexification des architectures (cloud, microservices, conteneurs, API…) ;</p>
+<br>L’objectif est d’éviter les vulnérabilités qui surviennent parce que la sécurité n’est testée qu’à la fin du développement, ce qui est plus long, coûteux et risqué pour les entreprises. (Snyk)
+</p>
+
+
+
+<br><br><br><br><br><br>
+    <h1>2️⃣ Problématique — Développeurs vs sécurité : les erreurs courantes dans le code</h1>
+<br><br>
+ <p> Dans un développement classique (sans DevSecOps) : <br><p>
+   <p> • La sécurité est souvent perçue comme un ajout après la mise en production plutôt qu’une phase intégrée ;</p> <br>
+   <p> • Les développeurs se concentrent avant tout sur les fonctionnalités, parfois au détriment de la sécurité du code. (wearedevops.fr)</p> <br>
+<p>Erreurs fréquentes rencontrées : </p><br>
+<p>👉 Validations d’entrée manquantes (injections SQL, XSS, etc.)</p><br>
+<p></p>👉 Utilisation de dépendances non vérifiées qui contiennent des vulnérabilités</p><br>
+<p></p>👉 Secrets stockés en clair dans le code source</p><br>
+<p></p>👉 Absence d’analyse automatisée des modifications de code</p><br>
+<p></p>👉 Tests sécurité réalisés trop tard ou manquants dans le pipeline</p><br>
+Sans pratiques sécurisées intégrées dès le départ, ces erreurs deviennent des vulnérabilités exploitables par des attaquants et coûtent cher à corriger plus tard. (wearedevops.fr) </p>
+ 
+
+
+<br><br><br><br><br><br><h1>
+3️⃣ Solutions et outils pour intégrer la sécurité au développement </h1>
+ <br><br>
+ <p> Pour faire du DevSecOps une réalité, plusieurs grandes familles de pratiques et outils sont utilisés. Voici les plus importants : </p>
+<h1> 🔎 3.1 Analyse statique du code (SAST) </h1>
+<br><br>
+<P>  L’analyse statique cherche automatiquement des vulnérabilités dans le code source, sans exécuter l’application.
+Exemples d’outils courants : </p> 
+    <p>• SonarQube / SonarCloud : vérifie la qualité et la sécurité du code</p>
+    <p> • Checkmarx : spécialisé en sécurité applicative</p>
+   <p> • Semgrep ou SpotBugs : alternatives open sourcebr <br>
+<br> Ces outils permettent d’intégrer l’analyse dès que le code est soumis (commit ou pull request).    
+<br>👉 Avantage : détection précoce des failles, avant même le build ou le déploiement. (Snyk)
+</P>
+<br><br>
+<h1> 📦 3.2 Analyse des dépendances (SCA)</h1>
+<br><br>
+<P> Les projets modernes utilisent souvent des bibliothèques open source. Ces dépendances peuvent contenir des vulnérabilités si elles ne sont pas vérifiées.
+<br>Outils populaires : 
+ <p>• Snyk : analyse les dépendances, conteneurs et IaC</p>
+  <p>• OWASP Dependency‑Check</p>
+  <p>• Trivy / Grype</p>
+Ces outils scannent automatiquement les dépendances à chaque build pour prévenir l’intégration de packages vulnérables. (Atlassian)</P>
+<h1>⚙️ 3.3 Analyse dynamique (DAST)  </h1>
+<br><br>
+<p>Contrairement au SAST, le DAST (Dynamic Application Security Testing) teste l’application en exécution pour détecter des failles exploitées en conditions réelles, comme : <br>
+   <p> • injections SQL ;</p> 
+   <p>• failles d’authentification ;</p> 
+  <p> • mauvaise gestion des sessions.</p> 
+Outils utilisés : <br>
+   <p>• OWASP ZAP (open‑source)</p>
+   <p>• Burp Suite</p>
+Le DAST est généralement intégré après le déploiement de l’application dans un environnement de test/staging. (Atlassian) </p>
+<h1> 🔐 3.4 Gestion des secrets et des accès </h1>
+<br><br>
+<p> Les clés API, tokens ou mots de passe ne doivent jamais être stockés directement dans le code. <br>Des outils comme :
+  <p>• HashiCorp Vault ou AWS Secrets Manager</p>
+permettent de gérer et distribuer les secrets de manière sécurisée.</p>
+<h1>  🧪 3.5 Intégration dans un pipeline CI/CD (GitHub Actions, GitLab CI/CD)</h1>
+<br><br>
+<p>Un élément central du DevSecOps est d’automatiser les tests de sécurité dans la pipeline CI/CD : <br>
+👉 Chaque commit déclenche automatiquement les vérifications SAST, SCA et DAST ;<br>
+👉 Les builds peuvent être bloqués si des vulnérabilités critiques sont détectées ;<br>
+👉 Les développeurs reçoivent des retours immédiats pour corriger leurs erreurs. (Snyk) <br>
+Outils d’intégration continue populaires : <br> 
+    <p>• GitHub Actions</p>
+  <p>  • GitLab CI/CD</p>
+   <p> • Jenkins</p>
+Ces plateformes permettent de définir des pipelines automatisés qui incluent des étapes de sécurité à chaque modification de code. (Snyk)
+</p>
+
+
+
+<br><br><br><br><br><br><h1>  
+4️⃣ Étude de cas — Exemple d’un pipeline DevSecOps pour une application web</h1>
+<br><br>
+<p> Pour illustrer concrètement comment fonctionne l’intégration DevSecOps, voici un schéma typique de pipeline : <br>
+📍 Étapes d’un pipeline sécurisé <br> 
+   <p> 1. Développeur pousse son code → déclenche le pipeline CI/CD.</p>
+   <p> 2. Analyse statique du code (SAST) via SonarQube → détecte les vulnérabilités avant build.</p>
+   <p> 3. Analyse des dépendances (SCA) avec Snyk ou Trivy → vérifie les packages et conteneurs.</p>
+   <p> 4. Compilation / build de l’application.</p>
+  <p> 5. Tests automatisés : unitaires, fonctionnels, puis DAST (par ex. avec OWASP ZAP) une fois le build déployé en staging.</p>
+    <p>6. Résultats centralisés → retours aux développeurs avec recommandations.</p>
+   <p>7. Déploiement si tout est conforme vers la production.</p>
+Ce pipeline montre comment la sécurité n’est plus une étape isolée, mais une partie intégrante du flow DevOps, assurant un logiciel plus sûr et des mises en production plus rapides. (Snyk)</p>
+<br><br><br><br><br><br>
+<h1>  5️⃣ Conclusion — Avantages et limites de l’approche DevSecOps</h1>
+<br><br>
+    <p> ✅ Avantages principaux <br>
+<p>✔️ Sécurité proactive : détection des vulnérabilités dès la création du code. (Snyk)</p>
+<p>✔️ Automatisation des contrôles de sécurité pour des cycles rapides sans sacrifier la sûreté. (Snyk)</p>
+<p> ✔️ Réduction des coûts : corriger une vulnérabilité tôt est bien moins coûteux que la réparer en production. (Snyk)</p>
+<p> ✔️ Culture de responsabilité collective entre Dev, Sec et Ops. (Snyk)</p>
+<br> <br> <br> <br>
+⚠️ Limites ou défis à anticiper 
+<p>❗ Mise en place initiale complexe : il faut configurer outils, pipelines et règles de sécurité. (Atlassian)</p>
+<p>❗ Résistance au changement culturel dans les équipes traditionnelles. (Snyk)</p>
+<p>❗ Faux positifs / alertes des outils lors des premières implémentations qui demandent tuning. (communauté/retours terrain) (Reddit)</p>
+<p>❗ Nécessite une coordination forte entre équipes Dev, Sec et Ops. (Atlassian)</p>
+
+<br><br><br><br><br><br>
+<h2> 🔚 En résumé </h2>
+<p>Le DevSecOps est une évolution essentielle du DevOps, car il permet d’intégrer la sécurité dans chaque étape du développement sans ralentir le processus de livraison. En automatisant des tests de sécurité et en responsabilisant toutes les équipes, il réduit les risques, les coûts et les erreurs humaines tout en améliorant la qualité des logiciels livrés. </p>
+
+<br><br><br><br><br><br>
+<h1>📚 Sources utilisées  </h1>
+<p> Voici les sources principales qui ont permis de construire cette veille : <br>
+   <p> • Définition et objectifs du DevSecOps — Snyk, Atlassian. (Snyk)</p>
+   <p> • Bonnes pratiques et outils DevSecOps — guides spécialisés. (IT Mag by TD SYNNEX)</p>
+   <p> • Documentation récente ANSSI sur pratiques DevSecOps. (Cybermalveillance)</p>
+</main>
+  <footer>
+    <p>&copy; 2025 Portfolio</p>
+  </footer>
+</body>
+</html>
